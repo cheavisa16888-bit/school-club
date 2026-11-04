@@ -1,9 +1,9 @@
 // SITE SETTINGS — the basic facts about this website, in one place.
 // Change these first when you make the site your own.
 export const site = {
-  name: 'Vibe Code Cambodia',
-  tagline: 'Make a real website by talking to AI.',
+  name: 'CR7 Fans KH',
+  tagline: 'A Cambodian fan site for Cristiano Ronaldo.',
   description:
-    'A hands-on workshop at New Hope Cambodia: build and publish a marketing website by describing it to an AI.',
-  contactEmail: 'dandelion@dandelion.art',
+    'Cristiano Ronaldo’s story, clubs, trophies, and records — made by football fans in Cambodia. English and Khmer.',
+  contactEmail: 'hello@example.com', // TODO: change to your real email
 };
