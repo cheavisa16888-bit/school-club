@@ -2,9 +2,9 @@
 import { site } from '../site';
 
 const links = [
-  { href: '/#story', label: 'Story' },
-  { href: '/#clubs', label: 'Clubs' },
-  { href: '/#trophies', label: 'Trophies' },
+  { href: '/#story', label: 'Story', km: 'រឿងរ៉ាវ' },
+  { href: '/#clubs', label: 'Clubs', km: 'ក្លឹប' },
+  { href: '/#trophies', label: 'Trophies', km: 'ពានរង្វាន់' },
 ];
 ---
 
@@ -18,11 +18,11 @@ const links = [
       {
         links.map((l) => (
           <a href={l.href} class="hidden rounded-full px-3 py-2 text-ink/70 hover:bg-ink/5 hover:text-ink sm:inline-block">
-            {l.label}
+            {l.label} <span lang="km" class="font-khmer text-xs opacity-70">{l.km}</span>
           </a>
         ))
       }
-      <a href="/#join" class="rounded-full bg-ink px-4 py-2 text-paper hover:bg-brand">Join the fans</a>
+      <a href="/#join" class="rounded-full bg-ink px-4 py-2 text-paper hover:bg-brand">Join the fans <span lang="km" class="font-khmer opacity-80">ចូលរួម</span></a>
     </nav>
   </div>
 </header>

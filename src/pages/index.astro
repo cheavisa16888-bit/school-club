@@ -19,6 +19,7 @@ const clubs = [
     years: '2002–2003',
     name: 'Sporting CP',
     place: 'Lisbon, Portugal',
+    placeKm: 'ទីក្រុងលីសបោន ប្រទេសព័រទុយហ្គាល់',
     text: 'His first professional club. He played his first senior games here at 17.',
     textKm: 'ក្លឹបអាជីពដំបូងរបស់គាត់។ គាត់លេងប្រកួតដំបូងនៅទីនេះ ពេលអាយុ ១៧ ឆ្នាំ។',
   },
@@ -26,6 +27,7 @@ const clubs = [
     years: '2003–2009',
     name: 'Manchester United',
     place: 'England',
+    placeKm: 'ប្រទេសអង់គ្លេស',
     text: 'He became a star, won the Premier League three times, and won his first Champions League and Ballon d’Or.',
     textKm: 'គាត់ក្លាយជាតារា ឈ្នះ Premier League បីដង និងឈ្នះ Champions League និង Ballon d’Or ជាលើកដំបូង។',
   },
@@ -33,6 +35,7 @@ const clubs = [
     years: '2009–2018',
     name: 'Real Madrid',
     place: 'Spain',
+    placeKm: 'ប្រទេសអេស្ប៉ាញ',
     text: 'The club’s all-time top scorer, with 450 goals and four Champions League titles.',
     textKm: 'អ្នកស៊ុតបញ្ចូលទីច្រើនជាងគេបំផុតរបស់ក្លឹប ជាមួយ ៤៥០ គ្រាប់ និងពាន Champions League បួនដង។',
   },
@@ -40,6 +43,7 @@ const clubs = [
     years: '2018–2021',
     name: 'Juventus',
     place: 'Italy',
+    placeKm: 'ប្រទេសអ៊ីតាលី',
     text: 'He won Serie A twice and was the league’s top scorer.',
     textKm: 'គាត់ឈ្នះ Serie A ពីរដង ហើយជាអ្នកស៊ុតបញ្ចូលទីច្រើនជាងគេក្នុងលីគ។',
   },
@@ -47,6 +51,7 @@ const clubs = [
     years: '2021–2022',
     name: 'Manchester United',
     place: 'England',
+    placeKm: 'ប្រទេសអង់គ្លេស',
     text: 'A short return to the club where he first became famous.',
     textKm: 'ការត្រឡប់មកវិញមួយរយៈខ្លី ទៅក្លឹបដែលធ្វើឱ្យគាត់ល្បីល្បាញដំបូង។',
   },
@@ -54,6 +59,7 @@ const clubs = [
     years: '2023–now',
     name: 'Al Nassr',
     place: 'Saudi Arabia',
+    placeKm: 'ប្រទេសអារ៉ាប៊ីសាអូឌីត',
     text: 'Still scoring goals and still the captain of Portugal.',
     textKm: 'នៅតែស៊ុតបញ្ចូលទី ហើយនៅតែជាប្រធានក្រុមព័រទុយហ្គាល់។',
   },
@@ -102,9 +108,9 @@ const lessons = [
 
       <div class="relative mx-auto grid max-w-6xl items-center gap-12 px-4 py-16 sm:px-6 sm:py-24 lg:grid-cols-2">
         <div>
-          <p class="inline-flex items-center gap-2 rounded-full border border-ink/10 bg-white/70 px-3 py-1 text-sm font-medium">
-            <span class="size-2 rounded-full bg-leaf"></span>
-            A fan site from Cambodia ⚽
+          <p class="inline-flex items-center gap-2 rounded-2xl border border-ink/10 bg-white/70 px-3 py-1 text-sm font-medium">
+            <span class="size-2 shrink-0 rounded-full bg-leaf"></span>
+            <span>A fan site from Cambodia ⚽<span class="km" lang="km">គេហទំព័រអ្នកគាំទ្រពីកម្ពុជា</span></span>
           </p>
           <h1 class="mt-6 font-display text-5xl leading-[1.02] font-extrabold tracking-tight text-balance sm:text-6xl lg:text-7xl">
             Cristiano <span class="text-brand">Ronaldo</span>. The legend of number 7.
@@ -194,7 +200,10 @@ const lessons = [
               <li class="rounded-2xl border border-ink/10 bg-paper p-6">
                 <span class="inline-block rounded-full bg-ink px-3 py-1 font-display text-sm font-bold text-paper">{c.years}</span>
                 <h3 class="mt-4 font-display text-2xl font-bold">{c.name}</h3>
-                <p class="text-sm font-medium text-leaf">{c.place}</p>
+                <p class="text-sm font-medium text-leaf">
+                  {c.place}
+                  <span class="km" lang="km">{c.placeKm}</span>
+                </p>
                 <p class="mt-2 text-muted">
                   {c.text}
                   <span class="km" lang="km">{c.textKm}</span>
